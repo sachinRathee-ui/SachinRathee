@@ -1,0 +1,84 @@
+.t {
+	width: 45px;
+	height: 45px;
+	border-radius: 30px;
+	border: 2.5px solid white;
+	background-color: white;
+	position: fixed;
+	top: 5px;
+	right: 40px;
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	/* padding: 0px 5px; */
+}
+.t-icon {
+	width: 25px;
+	height: 25px;
+	/* margin: 0px 5px; */
+}
+
+.t-button {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	position: absolute;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+}
+.t-button-hover {
+	display: none;
+	position: absolute;
+	width: 150px;
+	background-color: #fff;
+	color: #222;
+	text-align: center;
+	border-radius: 5px;
+	left: -160px;
+	box-shadow: 0px 0px 30px -11px rgba(0, 0, 0, 0.37);
+	-webkit-box-shadow: 0px 0px 30px -11px rgba(0, 0, 0, 0.37);
+	-moz-box-shadow: 0px 0px 30px -11px rgba(0, 0, 0, 0.37);
+	animation: fade 0.3s ease-in-out;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.t-button:hover .t-button-hover {
+	display: block;
+}
+.t-text {
+	display: none;
+}
+@media screen and (max-width: 480px) {
+	.t-button {
+		display: none;
+	}
+	.t {
+		width: max-content;
+		border-radius: 0px;
+		border: none;
+		background-color: transparent;
+		z-index: 999;
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	.t-text {
+		display: block;
+	}
+	.t-button-hover {
+		display: none;
+	}
+}

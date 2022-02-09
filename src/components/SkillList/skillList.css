@@ -1,0 +1,30 @@
+.s {
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+	height: 80vh;
+}
+.s-wrapper {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.s-heading {
+	font-weight: 400;
+}
+
+.s-items {
+	width: 100%;
+	text-align: left;
+}
+@media screen and (max-width: 480px) {
+	.s {
+		height: 90vh;
+	}
+	.s-wrapper {
+		width: 90%;
+	}
+}
